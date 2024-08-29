@@ -115,10 +115,16 @@ In your project directory, create a .devcontainer folder. This folder will hold 
 
    **Explanation of `devcontainer.json` Fields:**
 
-   - `"name"`: Name of your dev container.
-   - `"build"`: Specifies the Dockerfile used to build the dev container image.
-   - `"settings"`: VS Code settings for the container environment.
-   - `"extensions"`: List of VS Code extensions to install in the container.
-   - `"forwardPorts"`: List of ports to forward from the container to the host machine (8888 for Jupyter).
-   - `"postCreateCommand"`: Command to run after the container is created (e.g., to check Python version).
-   - `"remoteUser"`: Specifies the user to use within the container.
+1. **`name`**: Defines a recognizable name for the dev container, shown in the VS Code interface.
+
+2. **`build`**: Specifies the Dockerfile or image to use for building the development container.
+
+3. **`settings`**: Configures VS Code-specific settings inside the dev container, such as editor preferences.
+
+4. **`extensions`**: Lists VS Code extensions to automatically install in the container environment.
+
+5. **`forwardPorts`**: Specifies which ports to expose from the container to the host machine.
+
+6. **`postCreateCommand`**: Runs a command after the dev container is created, useful for setup tasks.
+
+7. **`remoteUser`**: Sets the user under which VS Code operates within the dev container.
