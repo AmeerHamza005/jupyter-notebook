@@ -96,22 +96,22 @@ In your project directory, create a .devcontainer folder. This folder will hold 
    **`.devcontainer/devcontainer.json`**
 
    ```json
-   {
-     "name": "Python Dev Container",
-     "build": {
-       "dockerfile": "Dockerfile"
-     },
-     "settings": {
-       "terminal.integrated.shell.linux": "/bin/bash"
-     },
-     "extensions": [
-       "ms-python.python"
-     ],
-     "forwardPorts": [8888],
-     "postCreateCommand": "python --version",
-     "remoteUser": "root"
-   }
-   ```
+{
+  "name": "Hello World Jupyter Dev Container",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "remoteUser": "jovyan"
+}
+
 
    **Explanation of `devcontainer.json` Fields:**
 
