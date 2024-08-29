@@ -54,7 +54,7 @@ This command tells Docker to build an image from the Dockerfile in the current d
 Once the image is built, you can run a container from this image:
 
 ```bash
-docker run -p 8888:8888 -v $(pwd):/app hello-world-jupyter
+docker run -p 8888:8888 -v "%cd%:/app" hello-world-jupyter
 ```
 
 - `-p 8888:8888` maps port 8888 on your local machine to port 8888 in the Docker container, allowing you to access the Jupyter Notebook.
