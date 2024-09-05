@@ -97,20 +97,20 @@ In your project directory, create a .devcontainer folder. This folder will hold 
 
    ```json
 {
-  "name": "Hello World Jupyter Dev Container",
-  "build": {
-    "dockerfile": "../Dockerfile"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
+    "name": "Python Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
         "ms-python.python",
-        "ms-toolsai.jupyter"
-      ]
-    }
-  },
-  "remoteUser": "jovyan"
+        "ms-python.vscode-pylance"
+    ],
+    "forwardPorts": [8888],
+    "postCreateCommand": "pip install -r requirements.txt",
+    "remoteUser": "root"
 }
-
 
    
